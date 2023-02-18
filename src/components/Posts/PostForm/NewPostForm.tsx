@@ -4,7 +4,7 @@ import { BiPoll }from 'react-icons/bi';
 import { BsLink45Deg, BsMic } from "react-icons/bs";
 import { IoDocumentText, IoImageOutline } from "react-icons/io5";
 import { AiFillCloseCircle } from "react-icons/ai";
-import TabItem from "./TabItem";
+import TabNavItem from "./TabNavItem";
 import TextInputs from './TextInputs';
 import ImageUpload from './ImageUpload';
 import { Post } from '@/atoms/postsAtom';
@@ -24,7 +24,7 @@ type NewPostFormProps = {
 const formTabs = [
   {
     title: 'Post',
-    icon: IoDocumentText
+    icon: IoDocumentText,    
   },
   {
     title: 'Images & Video',
@@ -116,7 +116,7 @@ const NewPostForm:React.FC<NewPostFormProps> = ({ user, communityImageURL }) => 
     <Flex direction='column' bg='white' borderRadius={4} mt={2}>
       <Flex width='100%'>
         {formTabs.map((item)=>(
-          <TabItem 
+          <TabNavItem 
             key={item.title}
             item={item} 
             selected={item.title === selectedTab}
