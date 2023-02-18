@@ -26,9 +26,9 @@ const Navbar:React.FC = () => {
         cursor='pointer'
         onClick={()=>onSelectMenuItem(defaultMenuItem)}
       >
-        <Image src="/images/redditFace.svg" height="30px" borderRadius='50%'/>
+        <Image src="/images/redditFace.svg" alt='' height="30px" borderRadius='50%'/>
         {/* <Text fontWeight={600} ml={2} align='center' display={{ base: 'none', md: 'unset'}}>HDRP</Text> */}
-        <Image src="/images/redditText.svg" height="46px" display={{ base: 'none', md: 'unset'}}/>
+        <Image src="/images/redditText.svg" alt='' height="46px" display={{ base: 'none', md: 'unset'}}/>
       </Flex>
       {user && <Directory />}
       <SearchInput user={user} />

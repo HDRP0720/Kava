@@ -24,6 +24,7 @@ const UserMenu:React.FC = () => {
             {directoryState.selectedMenuItem.imageURL ? (
               <Image 
                 src={directoryState.selectedMenuItem.imageURL}
+                alt=''
                 borderRadius='full'
                 boxSize='24px'
                 mr={2}

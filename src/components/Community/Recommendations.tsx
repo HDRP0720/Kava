@@ -106,6 +106,7 @@ const Recommendations:React.FC = () => {
                             borderRadius="full"
                             boxSize="28px"
                             src={item.imageURL}
+                            alt='Community Image'
                             mr={2}
                           />
                         ) : (
