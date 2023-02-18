@@ -1,7 +1,7 @@
 import { Community } from '@/atoms/communitiesAtom';
 import { firestore } from '@/firebase/clientApp';
 import useCommunityData from '@/hooks/useCommunityData';
-import { Flex, Icon, Skeleton, SkeletonCircle, Stack, Text, Image, Box, Button } from '@chakra-ui/react';
+import { Flex, Icon, Skeleton, SkeletonCircle, Stack, Text, Image, Box, Button, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Accordion } from '@chakra-ui/react';
 import { collection, getDocs, limit, orderBy, query } from 'firebase/firestore';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -54,12 +54,12 @@ const Recommendations:React.FC = () => {
         height='70px'
         borderRadius='4px 4px 0px 0px'
         fontWeight={700}
-        bgImage='url(/images/recCommsArt.png)'
+        bgImage='url(/images/lorenzo-herrera-p0j-mE6mGo4-unsplash-banner.png)'
         backgroundSize='cover'
         bgGradient="linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
-        url('images/recCommsArt.png')"
+        url('images/lorenzo-herrera-p0j-mE6mGo4-unsplash-banner.png')"
       >        
-        <Text>Top Communities</Text>
+        <Text>Communities</Text>
       </Flex>
 
       <Flex direction='column'>
@@ -147,9 +147,26 @@ const Recommendations:React.FC = () => {
                 </Link>
               )
             })}
-            <Box p='10px 20px'>
+
+              {/* <Accordion allowToggle>
+                <AccordionItem>
+                  <AccordionButton>
+                    <Box as="span" flex='1'>
+                      <Button height='30px' width='100%'>View All</Button>
+                    </Box>                 
+                  </AccordionButton>
+                  <AccordionPanel pb={4}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                  </AccordionPanel>
+                </AccordionItem>
+            </Accordion>             */}
+
+            {/* <Box p='10px 20px'>
               <Button height='30px' width='100%'>View All</Button>
-            </Box>
+            </Box> */}
           </>
         )}
       </Flex>
